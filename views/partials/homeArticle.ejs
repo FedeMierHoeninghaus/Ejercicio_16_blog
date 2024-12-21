@@ -1,0 +1,27 @@
+<div class="card">
+  <a href="/articulos/<%=article.id %>">
+    <div class="card-body">
+      <% if (article.title) { %>
+      <h5 class="card-title"><%= article.title %></h5>
+      <% } else { %>
+      <p>Título no disponible</p>
+      <% } %> <% if (article.img) { %>
+      <img src="<%= article.img %>" alt="<%= article.title || 'Imagen no disponible' %>" />
+      <% } else { %>
+      <p>Imagen no disponible</p>
+      <% } %> <% if (article.content) { %>
+      <p class="card-text">
+        <%= article.content.length > 300 ? article.content.slice(0, 300) + '...' : article.content
+        %>
+      </p>
+
+      <% } else { %>
+      <p>Contenido no disponible</p>
+      <% } %> <% if (article.creationDate) { %>
+      <p class="card-text">
+        <small class="text-muted"><%= article.creationDate %></small>
+      </p>
+      <% } %>
+    </div>
+  </a>
+</div>

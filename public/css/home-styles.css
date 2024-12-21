@@ -1,0 +1,23 @@
+.container {
+  background-color: lavender;
+  height: 1000px;
+  padding: 0;
+}
+body {
+  background-color: lightblue;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+a {
+  color: inherit;
+  text-decoration: None;
+}
+
+a:hover {
+  color: inherit;
+}
